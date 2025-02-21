@@ -1,0 +1,25 @@
+/* src/components/BottomSection.css */
+.bottom-section {
+    text-align: center;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  
+  .bottom-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .bottom-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .bottom-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  

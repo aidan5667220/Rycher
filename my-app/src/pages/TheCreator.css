@@ -1,0 +1,55 @@
+/* src/pages/TheCreator.css */
+.the-creator-page {
+    position: relative;
+    background: url('http://images.unsplash.com/photo-1575286307216-e7e797daea3a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    padding-top: 60px; /* space for header */
+  }
+  
+  .creator-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  /* Each creator card: image left, text right on large screens */
+  .creator-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Image container */
+  .creator-image {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .creator-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Text container */
+  .creator-text {
+    flex: 2;
+    padding: 20px;
+    border-radius: 10px;
+    background: #333;
+    font-size: 20px;
+  }
+  
+  /* Responsive: stack vertically on smaller screens */
+  @media (max-width: 768px) {
+    .creator-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .creator-text {
+      max-width: 100%;
+    }
+  }

@@ -1,0 +1,65 @@
+/* src/components/OurProjects.css */
+.our-projects-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .our-projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .project-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  /* Style for the application name "Aurora" */
+  .app-name {
+    font-size: 2.5rem;  /* Increase size as desired */
+    font-weight: bold;
+    margin: 20px 0;
+  }
+.highlight {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        color: #fff; /* or a color that stands out on your background */
+      }
+     
+  .project-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
+  .project-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Responsive: stack vertically on mobile */
+  @media (max-width: 768px) {
+    .projects-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .project-text {
+      text-align: center;
+    }
+  }
