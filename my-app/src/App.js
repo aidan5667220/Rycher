@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import TheIdea from './pages/TheIdea';
 import TheWhy from './pages/TheWhy';
 import TheCreator from './pages/TheCreator';
+import './index.css';
 import './App.css';
 
 function App() {
