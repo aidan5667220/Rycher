@@ -22,5 +22,6 @@
   max-width: 500px;
   max-height: 500px;
   margin: 0 auto;
+  align-content: center;
   /* Adjust the height/width as needed */
 }

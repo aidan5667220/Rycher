@@ -18,7 +18,8 @@ function Footer() {
       <div 
         className="typeform-widget" 
         data-url="https://form.typeform.com/to/RZQ68gm8"
-        style={{ width: '100%', height: '300px' }}
+        style={{ width: '75%', height: '200px', margin: '0 auto' }}
+
       ></div>
     </footer>
   );

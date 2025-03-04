@@ -1,0 +1,248 @@
+/* Reset body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", 'Lato', sans-serif;
+  }
+  
+  /* Remove default link underlines */
+  a {
+    text-decoration: none;
+  }
+  .learn-more {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Learn More button styling */
+  .learn-more-button {
+    display: inline-block;
+    padding: 6px 12px;     /* Adjust the button size as needed */
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background: #ddd;
+  }
+  /* Container for the Learn More button */
+.learn-more {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Learn More button styling */
+  .learn-more-button {
+    display: inline-block;
+    padding: 6px 12px;     /* Adjust the button size as needed */
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background: #ddd;
+  }
+  
+  /* Hero section: full screen with a background image */
+  .et-hero-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for hero */
+    position: relative;
+    text-align: center;
+    padding: 0 2em;
+  
+    /* Hero background image (change to your own) */
+    background: url('http://images.unsplash.com/photo-1575286307216-e7e797daea3a?q=80&w=1170&auto=format&fit=crop')
+      no-repeat center center;
+    background-size: cover;
+  }
+  
+  .et-hero-tabs h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 0.5rem;
+    color: #fff;
+  }
+  .et-hero-tabs h3 {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    opacity: 0.8;
+    color: #fff;
+  }
+  
+  /* Sticky nav container */
+  .et-hero-tabs-container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    /* Instead of bottom: 0, set the initial top value so that the nav bar sits at the bottom */
+    top: calc(100vh - 70px);
+    width: 100%;
+    height: 70px;
+    transition: top 0.3s ease-in-out;  /* This animates the change in the top property */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+  }
+  
+  .et-hero-tabs-container--top {
+    top: 0;
+  }
+  
+  /* Each nav tab link */
+  .et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 1rem;
+  }
+  .et-hero-tab:hover {
+    color: #fff;
+    background: rgba(102, 177, 241, 0.8);
+  }
+  
+  /* Blue slider bar under the active tab */
+  .et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66B1F1;
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+  
+  /* Main container for slides */
+  .et-main {
+    /* no special styling here */
+  }
+  
+  /* Each section (slide) is still full viewport height,
+     but we nest a .slide-background inside to show the border and radius. */
+  .et-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative;
+    text-align: center;
+    padding: 0; /* no padding here */
+    margin: 0;
+  }
+  
+  /* The child div that holds the actual background image and content. */
+  .slide-background {
+    /* We'll keep the content vertically & horizontally centered. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* A bit smaller than full viewport, so the border is visible around it. */
+    width: 90%;
+    height: calc(100vh - 60px); /* subtract some px for margin or the border thickness */
+    margin: 30px auto; /* center it horizontally, add top/bottom spacing */
+  
+    /* The thick, round border you asked for */
+    border: 10px solid #fff; /* thick white border */
+    border-radius: 30px;     /* round corners */
+    overflow: hidden;        /* ensures background doesn't bleed outside the rounded corners */
+  
+    /* We'll set background images for each .slide-bg-* class below. */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Slide headings inside .slide-background */
+  .slide-background h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 0.3rem;
+    color: #fff;
+  }
+  .slide-background h3 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    opacity: 0.8;
+    color: #fff;
+  }
+  
+  /* 
+     Different background images for each slide. 
+     Replace the URLs with your own Unsplash images. 
+  */
+  .slide-bg-es6 {
+    background-image: url('https://images.unsplash.com/photo-1559825481-12a05cc00344?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2NlYW58ZW58MHx8MHx8fDA%3D');
+  }
+  .slide-bg-flexbox {
+    background-image: url('https://images.unsplash.com/photo-1581291519195-ef11498d1cf2?fit=crop&w=1170&q=80');
+  }
+  .slide-bg-react {
+    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW5zfGVufDB8fDB8fHww');
+  }
+  .slide-bg-angular {
+    background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW5zfGVufDB8fDB8fHww');
+  }
+  .slide-bg-other {
+    background-image: url('https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJlZXN8ZW58MHx8MHx8fDA%3D');
+  }
+  
+  .back-to-top-container {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-top-container h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #000;
+  }
+  
+  /* On hover, the footer's background changes to match the nav hover color */
+  .back-to-top-container:hover {
+    background: rgba(102, 177, 241, 0.8);
+  }
+  
+  .back-to-top-container:hover h2 {
+    color: #fff;
+  }
+  
+  /* -------------------------- */
+  /* Responsive Adjustments */
+  /* -------------------------- */
+  @media (min-width: 800px) {
+    .et-hero-tabs h1 {
+      font-size: 4rem;
+    }
+    .et-hero-tabs h3 {
+      font-size: 1.2rem;
+    }
+    .slide-background h1 {
+      font-size: 3rem;
+    }
+    .slide-background h3 {
+      font-size: 1.2rem;
+    }
+    .back-to-top-container h2 {
+      font-size: 2.5rem;
+    }
+  }

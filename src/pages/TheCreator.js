@@ -1,20 +1,16 @@
 // src/pages/TheCreator.js
 import React from 'react';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 import './TheCreator.css';
 
 function TheCreator() {
   return (
     <div className="the-creator-page">
-      <Header />
+      <Navbar />
       <div className="creator-cards">
         {/* Aidan Fischer */}
         <div className="creator-card">
           <div className="creator-image">
-            <img 
-              src={`${process.env.PUBLIC_URL}/public/images/92C8CD84-1B93-476E-9AA9-D68BC03D98AD_1_105_c.jpeg`} 
-              alt="Aidan Fischer" 
-            />
           </div>
           <div className="creator-text">
             <h2>Aidan Fischer</h2>

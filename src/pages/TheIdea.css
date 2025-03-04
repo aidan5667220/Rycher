@@ -1,86 +1,167 @@
 /* src/pages/TheIdea.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
 .the-idea-page {
-    /* Use the same background image as your other pages or adjust as needed */
-    background-image: url('http://images.unsplash.com/photo-1575286307216-e7e797daea3a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-  }
-  
+  background-image: url('http://images.unsplash.com/photo-1575286307216-e7e797daea3a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-top: 80px; /* Leaves space for fixed Navbar */
+}
 
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 2s forwards;
+  /* Optional: you can stagger animation delays on specific sections */
+}
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .idea-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    margin: 40px auto;
-    max-width: 1000px;
-  }
-  
-  .idea-image {
-    flex: 1;
-    max-width: 500px;
-  }
-  
-  .idea-image img {
-    width: 100%;
-    border-radius: 15px;
-  }
-  
-  .idea-text {
-    flex: 1;
-    max-width: 600px;
-    padding: 30px;
-    background: #333 ; /* Tighter box for text */
-    border-radius: 10px;
-    line-height: 1.6;
-    font-size: 1.2rem;
-  }
-  
-  /* Intermediate image section */
-  .intermediate-image {
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  .intermediate-image img {
-    max-width: 80%;
-    border-radius: 10px;
-  }
-  /* Shared styling for text boxes (for consistency between 'The Idea' and 'The How') */
+/* Header Section */
+.idea-header {
+  text-align: center;
+  padding: 40px 20px;
+  animation-delay: 0.2s;
+}
+.main-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: #fff;
+}
+.sub-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Main Idea Content */
+.idea-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.idea-image {
+  flex: 1;
+  max-width: 500px;
+}
+.idea-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+}
+.idea-text {
+  flex: 1;
+  max-width: 600px;
+  padding: 30px;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  backdrop-filter: blur(15px);
+}
+.idea-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.idea-text p {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+}
+
+/* Highlight styles */
+.highlight {
+  color: lightblue;
+  font-weight: bold;
+}
+.highlight-emphasis {
+  color: lightcoral;
+  font-weight: bold;
+}
+
+/* Intermediate Image Section */
+.intermediate-image {
+  text-align: center;
+  margin: 40px 0;
+}
+.intermediate-image img {
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+}
+
+/* "How" Section Styling */
+.how-section {
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 900px;
+}
+
 .how-container {
-  background: #333; /* Solid dark background */
   padding: 30px;
   border-radius: 10px;
   line-height: 1.6;
   font-size: 1.2rem;
-  margin: 20px auto;
-  max-width: 800px;
 }
-
-/* Adjust the heading styling if needed */
 .how-container h3 {
   margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+}
+.how-container p {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+}
+/* How List Styling */
+.how-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.how-list li {
   margin-bottom: 10px;
-  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding-left: 25px;
+}
+.how-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: lightblue;
 }
 
- 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .idea-content {
-      flex-direction: column;
-      text-align: center;
-    }
-    .idea-text {
-      max-width: 100%;
-    }
-    .how-section {
-      padding: 0 20px;
-    }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .idea-content {
+    flex-direction: column;
+    text-align: center;
   }
-  
+  .idea-text {
+    max-width: 100%;
+  }
+  .how-section {
+    padding: 20px;
+  }
+}

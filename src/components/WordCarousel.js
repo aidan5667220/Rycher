@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './WordCarousel.css';
 
-function WordCarousel({ sentences, interval = 3000 }) {
+function WordCarousel({ sentences, interval = 4500 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
 

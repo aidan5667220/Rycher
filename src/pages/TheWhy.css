@@ -1,53 +1,131 @@
+/* src/pages/TheWhy.css */
 
+/* Import Google Fonts for a refined look */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Fade-in animation for smooth transitions */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 1s forwards;
+}
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page container */
 .the-why-page {
-    /* Use the same background image as your other pages or adjust as needed */
-    background-image: url('http://images.unsplash.com/photo-1575286307216-e7e797daea3a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-  }
-  
-  .why-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 40px;
-  }
-  
-  .why-image {
-    flex: 1;
-    max-width: 400px;
-  }
-  
-  .why-image img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Limit the height of the image */
-    object-fit: cover; /* Crop if necessary */
-    border-radius: 10px;
-  }
+  background-image: url('http://images.unsplash.com/photo-1575286307216-e7e797daea3a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-top: 80px; /* Space for fixed Navbar */
+}
 
-  
+/* Why Content Section */
+.why-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.why-image {
+  flex: 1;
+  max-width: 400px;
+}
+.why-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.why-text {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  backdrop-filter: blur(5px);
+  background: rgba(0,0,0,0.4);
+}
+.why-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.why-text p {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Highlight styles */
+.highlight {
+  color: lightblue;
+  font-weight: bold;
+}
+.highlight-emphasis {
+  color: lightcoral;
+  font-weight: bold;
+}
+
+/* New Call-to-Action (CTA) Section */
+.cta-section {
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+  transition: background 1s ease;
+}
+.cta-section.in-view {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+.cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+.cta-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.cta-button {
+  background-color: lightblue;
+  color: #222;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+  background-color: lightcoral;
+  transform: scale(1.05);
+}
+
+/* Responsive: Stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .why-content {
+    flex-direction: column;
+    text-align: center;
+  }
   .why-text {
-    flex: 1;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #333;
-    font-size: 20px;
+    max-width: 100%;
   }
-  
-  /* Responsive: stack vertically on smaller screens */
-  @media (max-width: 768px) {
-    .why-content {
-      flex-direction: column;
-      text-align: center;
-    }
-    .why-text {
-      max-width: 100%;
-    }
-  }
+}

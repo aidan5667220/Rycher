@@ -1,89 +1,70 @@
-/* Container: horizontal layout on larger screens */
+/* Container for the accordion boxes */
 .accordion-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;  /* Allow each item to size independently */
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  /* Each accordion item */
-  .accordion-item {
-    flex: 1;
-    backdrop-filter: blur(15px);
-    border: 2px solid #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  /* Accordion header */
-  .accordion-header {
-    padding: 20px;
-    cursor: pointer;
-  }
-  
-  .accordion-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  
-  /* Accordion content: collapsed by default */
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-  }
-  
-  /* When active, expand content */
-  .accordion-content.active {
-    max-height: 400px; /* adjust if needed; can be a fixed value or 'none' for auto height */
-    padding: 20px;
-  }
-  
-  /* Learn More button */
-  .learn-more {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .learn-more-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #fff;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-  
-  .learn-more-button:hover {
-    background: #ddd;
-  }
-  
-  /* Mobile responsiveness: vertical stacking */
-  @media (max-width: 768px) {
-    .accordion-container {
-      flex-direction: column;
-      align-items: stretch;
-    }
-    /* Let the active content determine its own height on mobile */
-    .accordion-content.active {
-      max-height: none;
-      padding: 20px;
-    }
-    /* Optionally adjust font sizes for better readability */
-    .accordion-header h2 {
-      font-size: 1.2rem;
-    }
-    .accordion-content p {
-      font-size: 1rem;
-    }
-  }
+  width: 90%;
+  max-width: 600px;      /* Reduced from 800px */
+  margin: top;     /* Reduced top/bottom margin to bring boxes closer to the top */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;             /* Smaller gap between boxes */
+  justify-content: space-around;
+}
+
+/* Each accordion item */
+.accordion-item {
+  flex: 1;
+  backdrop-filter: blur(15px);
+  border: 2px solid #fff;
+  border-radius: 10px;   /* Slightly smaller corner radius */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Accordion header styling */
+.accordion-header {
+  padding: 10px;         /* Reduced padding */
+  cursor: pointer;
+}
+
+.accordion-header h2 {
+  margin: 0;
+  font-size: 1.2rem;     /* Smaller font size */
+  color: #fff;
+}
+
+/* Accordion content: collapsed by default */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;       /* Reduced side padding */
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Active accordion content */
+.accordion-content.active {
+  max-height: 300px;     /* Adjust as needed */
+  padding: 10px;
+}
+
+/* Learn More button */
+.learn-more {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 6px 12px;     /* Smaller button size */
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background: #ddd;
+}
+
   
