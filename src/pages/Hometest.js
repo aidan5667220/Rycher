@@ -138,7 +138,7 @@ const Hometest = () => {
         <h1>Rycher</h1>
         <h3>Lets stop putting a bandaid on a bullet wound</h3>
         <TypingText 
-          text="Innovation, Collaboration, Patience and Integrity" 
+          text="Inovation, Collaboration, Patience and Integrity" 
           speed={100} 
         />
         <div className="et-hero-tabs-container" ref={tabContainerRef}>
@@ -208,7 +208,7 @@ const Hometest = () => {
           <div className="slide-background slide-bg-other">
             <h1>This Website is still in Beta</h1>
             <h3>
-              Please send in your email below with any questions, and we will get back to you as soon as possible
+              Please send in your email below with any questions
             </h3>
             <TypeformEmbed />
                 </div>
