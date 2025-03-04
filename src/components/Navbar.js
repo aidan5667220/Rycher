@@ -26,6 +26,9 @@ const Navbar = () => {
       {/* Slide-in navigation menu overlay */}
       <nav className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
         <ul>
+        <li style={{ animationDelay: '0.1s' }}>
+            <Link to="/" onClick={toggleMenu}>Home</Link>
+          </li>
           <li style={{ animationDelay: '0.1s' }}>
             <Link to="/theidea" onClick={toggleMenu}>The Idea</Link>
           </li>

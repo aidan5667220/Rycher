@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div className="notfound-page">
       <div className="notfound-content">
-        <h1 className="notfound-header">Sorry, this is still in development</h1>
+        <h1 className="notfound-header">This page is still in development</h1>
         <div className="notfound-buttons">
           <button className="btn back-btn" onClick={() => navigate(-1)}>
             Back

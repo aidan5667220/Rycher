@@ -1,10 +1,9 @@
-// src/pages/Hometest.js
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Hometest.css';
 import TypingText from '../components/TypingText';
 import WordCarousel from '../components/WordCarousel';
-import Footer from '../components/Footer';
+import TypeformEmbed from '../components/TypeformEmbed';
 
 // Define your sentences array at the top of the file
 const sentences = [
@@ -51,6 +50,20 @@ const Hometest = () => {
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onResize);
+    };
+  }, []);
+
+  // Load the Typeform script dynamically
+  useEffect(() => {
+    const script = document.createElement('script');
+    // Use explicit protocol for reliability
+    script.src = "https://embed.typeform.com/next/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Cleanup: remove the script if needed on unmount
+    return () => {
+      document.body.removeChild(script);
     };
   }, []);
 
@@ -165,8 +178,7 @@ const Hometest = () => {
               <Link to="/thewhy" className="learn-more-button">
                 The Why
               </Link>
-              {/* Pass the sentences array as a prop */}
-              <WordCarousel sentences={sentences} />
+              <WordCarousel sentences={sentences} /> 
             </div>
           </div>
         </section>
@@ -177,8 +189,8 @@ const Hometest = () => {
               We are currently working on creating applications that help bring together collaborative team building 
             </h3>
             <Link to="/applications" className="learn-more-button">
-                The Apps
-              </Link>
+              The Apps
+            </Link>
           </div>
         </section>
         <section className="et-slide" id="tab-angular">
@@ -198,17 +210,10 @@ const Hometest = () => {
             <h3>
               Please send in your email below with any questions, and we will get back to you as soon as possible
             </h3>
-            <Footer>
-
-            </Footer>
-          </div>
+            <TypeformEmbed />
+                </div>
         </section>
       </main>
-
-      {/* Full-width footer with "Back to the Top" */}
-      <footer className="back-to-top-container" onClick={scrollToTop}>
-        <h2>Back to the Top</h2>
-      </footer>
     </>
   );
 };

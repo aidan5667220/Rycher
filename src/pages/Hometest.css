@@ -225,6 +225,11 @@ html, body {
   .back-to-top-container:hover h2 {
     color: #fff;
   }
+  .my-typeform {
+    width: 75%;
+    height: 200px;
+    margin: 0 auto;
+  }
   
   /* -------------------------- */
   /* Responsive Adjustments */
