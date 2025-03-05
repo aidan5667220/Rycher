@@ -1,5 +1,6 @@
 // src/pages/TheWhy.js
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import './TheWhy.css';
 
@@ -73,7 +74,7 @@ function TheWhy() {
           <p>
             Be a part of the change. Invest in opportunity. Together, we can create a future where every person has the chance to thrive.
           </p>
-          <a href="/*" className="cta-button">Get Involved</a>
+          <Link to="/*" className="cta-button">Get Involved </Link>
         </div>
       </div>
     </div>
