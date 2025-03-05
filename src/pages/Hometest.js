@@ -138,9 +138,10 @@ const Hometest = () => {
         <h1>Rycher</h1>
         <h3>Lets stop putting a bandaid on a bullet wound</h3>
         <TypingText 
-          text="Inovation, Collaboration, Patience and Integrity" 
-          speed={100} 
-        />
+  text="Collaboration, Innovation, Patience and Integrity" 
+  speed={100} 
+/>
+
         <div className="et-hero-tabs-container" ref={tabContainerRef}>
           {tabs.map((tab, index) => (
             <a
