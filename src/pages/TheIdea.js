@@ -5,7 +5,7 @@ import './TheIdea.css';
 
 function TheIdea() {
   const howRef = useRef(null);
-
+  window.scrollTo(0, 0)
   useEffect(() => {
     // Observe the "How" section so its background changes on scroll
     const observer = new IntersectionObserver(

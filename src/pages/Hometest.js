@@ -185,7 +185,7 @@ const Hometest = () => {
         </section>
         <section className="et-slide" id="tab-react">
           <div className="slide-background slide-bg-react">
-            <h1>Applications that are in the Works</h1>
+            <h1>Applications that are in progress</h1>
             <h3>
               We are currently working on creating applications that help bring together collaborative team building 
             </h3>

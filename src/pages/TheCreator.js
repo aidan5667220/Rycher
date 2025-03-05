@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import './TheCreator.css';
 
 function TheCreator() {
+  window.scrollTo(0, 0)
   return (
     <div className="the-creator-page">
       <Navbar />

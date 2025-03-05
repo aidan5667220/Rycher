@@ -5,7 +5,7 @@ import './TheWhy.css';
 
 function TheWhy() {
   const ctaRef = useRef(null);
-
+  window.scrollTo(0, 0)
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -73,7 +73,7 @@ function TheWhy() {
           <p>
             Be a part of the change. Invest in opportunity. Together, we can create a future where every person has the chance to thrive.
           </p>
-          <a href="/get-involved" className="cta-button">Get Involved</a>
+          <a href="/*" className="cta-button">Get Involved</a>
         </div>
       </div>
     </div>
